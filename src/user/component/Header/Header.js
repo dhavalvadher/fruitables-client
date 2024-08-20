@@ -114,7 +114,7 @@ function Header() {
                 <div className="nav-item dropdown main">
                   <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
                   <div className="dropdown-menu m-0 bg-secondary rounded-0">
-                    {/* {categories.map((v) => (
+                    {categories.map((v) => (
                       <a
                         href="#"
                         key={v._id}
@@ -123,7 +123,7 @@ function Header() {
                       >
                         {v.name}
                       </a>
-                    ))} */}
+                    ))}
                   </div>
                   {showSubcat && (
                     <div className="dropdown-menu m-0 bg-secondary rounded-0 " id='subright'>
