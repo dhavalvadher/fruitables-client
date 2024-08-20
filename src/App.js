@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import UserRoutes from './routes/UserRoutes/UserRoutes';
 import AdminRoutes from './routes/AdminRoutes/AdminRoutes';
-import PrivateRoutes from './routes/PrivateRoutes/PrivateRoutes';
+// import PrivateRoutes from './routes/PrivateRoutes/PrivateRoutes';
 import { configstore } from './redux/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
@@ -31,9 +31,9 @@ function App() {
               <Alert/>
               <Routes>
                 <Route exact path="/*" element={<UserRoutes />} />
-                <Route element={<PrivateRoutes />}>
+                {/* <Route element={<PrivateRoutes />}> */}
                   <Route exact path="/admin/*" element={<AdminRoutes />} />
-                </Route>
+                {/* </Route> */}
               </Routes>
             </PersistGate>
           </Provider>
