@@ -150,7 +150,7 @@ axiosInstance.interceptors.response.use(
             
                 console.log("axiosInstance get-newtoken", response);
                 
-                if (response.status === 200) {
+                if (response.status === 401) {
                     const { accessToken } = response.data;
                     originalRequest.headers['Authorization'] = `Bearer ${accessToken}`;
                     return axiosInstance(originalRequest);

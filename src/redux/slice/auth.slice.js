@@ -36,8 +36,9 @@ export const login = createAsyncThunk(
     'auth/login',
     async (data, {dispatch, rejectWithValue }) => {
         try {
+            console.log(data);
+            
             const response = await axiosInstance.post('users/login', data);
-
             console.log(response);
 
             if (response.status === 200) {
