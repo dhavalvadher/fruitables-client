@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { baseURL } from '../../Utils/baseURL';
 
 const initialState = {
   isLoading: false,
@@ -9,7 +10,7 @@ const initialState = {
 
 export const getSubData = createAsyncThunk('subcategories/get', async () => {
   try {
-    const response = await axios.get("http://localhost:9000/api/v1/subcategories/list-subcategories");
+    const response = await axios.get(baseURL +"subcategories/list-subcategories");
     return response.data;
   } catch (error) {
     console.error(error.message);
@@ -18,7 +19,7 @@ export const getSubData = createAsyncThunk('subcategories/get', async () => {
 
 export const handleAdd = createAsyncThunk('subcategories/add', async (data) => {
   try {
-    const response = await axios.post("http://localhost:9000/api/v1/subcategories/create-subcategory", data);
+    const response = await axios.post(baseURL +"subcategories/create-subcategory", data);
     return response.data;
   } catch (error) {
     console.error(error.message);
@@ -27,7 +28,7 @@ export const handleAdd = createAsyncThunk('subcategories/add', async (data) => {
 
 export const deleteSubcategory = createAsyncThunk('subcategories/delete', async (id) => {
   try {
-    await axios.delete(`http://localhost:9000/api/v1/subcategories/delete-subcategory/${id}`);
+    await axios.delete(baseURL +`subcategories/delete-subcategory/${id}`);
     return id;
   } catch (error) {
     console.error(error.message);
@@ -36,7 +37,7 @@ export const deleteSubcategory = createAsyncThunk('subcategories/delete', async 
 
 export const handleUpdateData = createAsyncThunk('subcategories/update', async (data) => {
   try {
-    const response = await axios.put(`http://localhost:9000/api/v1/subcategories/update-subcategory/${data._id}`, data);
+    const response = await axios.put(baseURL +`subcategories/update-subcategory/${data._id}`, data);
     return response.data;
   } catch (error) {
     console.error(error.message);
