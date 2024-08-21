@@ -182,11 +182,11 @@ function Products() {
                 onBlur={handleBlur}
                 input={<OutlinedInput label="Select Category" />}
               >
-                {categories.map((v) => (
+                {/* {categories.map((v) => (
                   <MenuItem key={v._id} value={v._id}>
                     {v.name}
                   </MenuItem>
-                ))}
+                ))} */}
               </Select>
               {errors.category_id && touched.category_id && <span style={{ color: 'red' }}>{errors.category_id}</span>}
             </FormControl>
