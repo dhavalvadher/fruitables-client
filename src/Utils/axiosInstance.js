@@ -115,8 +115,9 @@
 
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { baseURL } from './baseURL';
+
 import { logout } from '../redux/slice/auth.slice';
+import { baseURL } from './baseURL';
 
 
 const axiosInstance = axios.create({
