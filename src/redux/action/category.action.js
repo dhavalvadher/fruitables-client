@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { ADD_CATEGORY, DELETE_CATEGORY, EDIT_CATEGORY, ERROR_CATEGORY, GET_CATEGORY } from '../ActionType';
 // import { baseURL } from '../../Utils/baseURL';
 import axiosInstance from '../../Utils/axiosInstance';
