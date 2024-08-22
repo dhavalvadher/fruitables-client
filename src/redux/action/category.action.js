@@ -13,7 +13,7 @@ export const setError = (error) => ({ type: ERROR_CATEGORY, payload: error });
 export const getCategories = () => async (dispatch) => {
     try {
         const response = await axiosInstance.get("categories/list_categories");
-        dispatch({ type: GET_CATEGORY, payload: response.data });
+        dispatch({ type: GET_CATEGORY, payload: response.data.data });
     } catch (error) {
         dispatch(setError(error.message));
     }
