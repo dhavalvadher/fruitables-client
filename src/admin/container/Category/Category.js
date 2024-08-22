@@ -62,64 +62,13 @@ function Category(props) {
         setUpdate(null);
     };
 
-    // const getData = async () => {
-    //     setIsLoading(true);
-    //     try {
-    //         const response = await fetch("http://localhost:8000/api/v1/categories/list_categories");
-    //         const data = await response.json();
-    //         setData(data.data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    //     setIsLoading(false);
-    // }
-
-    // const handleAdd = async (data) => {
-    //     try {
-    //         await fetch("http://localhost:8000/api/v1/categories/post_categories", {
-    //             method: "POST",
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(data)
-    //         });
-    //         getData();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
-
-    // const hendalDelete = async (data) => {
-    //     try {
-    //         await fetch(`http://localhost:8000/api/v1/categories/delete_categories/${data._id}`, {
-    //             method: 'DELETE'
-    //         });
-    //         getData();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
+  
 
     const handleEdit = (data) => {
         setOpen(true);
         formik.setValues(data);
         setUpdate(data._id);
     }
-
-    // const handleUpdateData = async (data) => {
-    //     try {
-    //         await fetch(`http://localhost:8000/api/v1/categories/update_categories/${data._id}`, {
-    //             method: "PUT",
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(data)
-    //         });
-    //         getData();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
 
     const columns = [
         { field: 'name', headerName: 'Name', width: 130 },

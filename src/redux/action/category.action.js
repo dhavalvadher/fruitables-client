@@ -1,5 +1,5 @@
 // import axios from 'axios';
-import { ADD_CATEGORY, DELETE_CATEGORY, EDIT_CATEGORY, ERROR_CATEGORY, GET_CATEGORY } from '../ActionType';
+import { ADD_CATEGORY, DELETE_CATEGORY, EDIT_CATEGORY, ERROR_CATEGORY, GET_CATEGORY, LOADING_CATEGORY } from '../ActionType';
 // import { baseURL } from '../../Utils/baseURL';
 import axiosInstance from '../../Utils/axiosInstance';
 
@@ -11,16 +11,17 @@ import axiosInstance from '../../Utils/axiosInstance';
 export const setError = (error) => ({ type: ERROR_CATEGORY, payload: error });
 
 export const getCategories = () => async (dispatch) => {
+    dispatch({ type: LOADING_CATEGORY });
     try {
         const response = await axiosInstance.get("categories/list_categories");
-        dispatch({ type: GET_CATEGORY, payload: response.data.data });
+        dispatch({ type: GET_CATEGORY, payload: response.data });
     } catch (error) {
         dispatch(setError(error.message));
     }
 };
 
 export const addCategory = (data) => async (dispatch) => {
-    
+    dispatch({ type: LOADING_CATEGORY });
     try {
         const response = await axiosInstance.post("categories/post_categories", data);
         dispatch({ type: ADD_CATEGORY, payload: response.data });
@@ -30,7 +31,7 @@ export const addCategory = (data) => async (dispatch) => {
 };
 
 export const deleteCategory = (id) => async (dispatch) => {
-    
+    dispatch({ type: LOADING_CATEGORY });
     try {
         await axiosInstance.delete("categories/delete_categories/" + id);
         dispatch({ type: DELETE_CATEGORY, payload: id });
@@ -40,7 +41,7 @@ export const deleteCategory = (id) => async (dispatch) => {
 };
 
 export const editCategory = (data) => async (dispatch) => {
-    
+    dispatch({ type: LOADING_CATEGORY });
     try {
         const response = await axiosInstance.put("categories/update_categories/" + data._id, data);
         dispatch({ type: EDIT_CATEGORY, payload: response.data });
