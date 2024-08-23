@@ -23,7 +23,7 @@ export const addProducts = (product) => async (dispatch) => {
             headers: { 'Content-Type': 'multipart/form-data'},
         });
 
-        // console.log(response);
+        console.log(response);
 
         dispatch({ type: ADD_PRODUCTS, payload: response.data.data });
 
