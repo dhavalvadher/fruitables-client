@@ -1,6 +1,6 @@
-export const baseURL = "https://fruitables-server-sooty.vercel.app/api/v1/"
+// export const baseURL = "https://fruitables-server-sooty.vercel.app/api/v1/"
 
-// export const baseURL = "http://localhost:9000/api/v1/"
+export const baseURL = "http://localhost:9000/api/v1/"
 
 
 export const CATEGORIES_URL = "http://localhost:9000/api/v1/categories/"
