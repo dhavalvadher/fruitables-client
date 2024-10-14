@@ -3,10 +3,6 @@ import { GET_SHOP } from '../ActionType';
 import { baseURL } from '../../Utils/baseURL';
 
 
-
-
-
-
 export const getshop = () => async (dispatch) => {
     try {
         await axios.get(baseURL + "fruits")

@@ -651,7 +651,6 @@ function Shop_Detail(props) {
     if (count > 1) {
       setCount(Prev => Prev - 1)
     }
-
   }
 
   // const qty = useSelector((state) => cart.cart.reduce((v, acc) => v + acc.qty, 0));

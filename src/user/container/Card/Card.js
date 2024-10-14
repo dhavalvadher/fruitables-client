@@ -292,7 +292,7 @@ import Button from '../../component/UI/Button/Button';
 
 
 function Card(props) {
-  const [copunsValid, setCopunsValid] = useState('');
+  // const [copunsValid, setCopunsValid] = useState('');
   const [discount, setDiscount] = useState(0);
   console.log(discount);
 

@@ -125,7 +125,7 @@ function Header() {
                       </a>
                     ))}
                   </div>
-                  {showSubcat && (
+                  {/* {handleAddtoCartshowSubcat && (
                     <div className="dropdown-menu m-0 bg-secondary rounded-0 " id='subright'>
                       {subcat.map((v) => (
                         <a
@@ -138,7 +138,7 @@ function Header() {
                         </a>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
                 <NavLink to="/Contact" className={`nav-item nav-link ligh ${themeContext.theme}`}>Contact</NavLink>
                 <NavLink to='/Register' className={`nav-item nav-link light ${themeContext.theme}`}>Register</NavLink>

@@ -51,9 +51,9 @@ const subcategorySlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getSubData.fulfilled, (state, action) => {
-        state.subcategories = action.payload.data;
-      })
+      // .addCase(getSubData.fulfilled, (state, action) => {
+      //   state.subcategories = action.payload.data;
+      // })
       .addCase(handleAdd.fulfilled, (state, action) => {
         state.subcategories = state.subcategories.concat(action.payload.data);
       })

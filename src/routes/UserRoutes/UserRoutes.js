@@ -50,7 +50,6 @@ function UserRoutes(props) {
                     
                     <Route element={<PrivateRoutes />}>
                     <Route exact path='/chackout' element={<Checkout />} />
-                     <Route exact path="/Shop" element={<Shop />} />
                     </Route>
                     
                     <Route exact path='/Testimonial' element={<Testimonial />} />
@@ -60,6 +59,8 @@ function UserRoutes(props) {
                     <Route exact path="/Login" element={<Login />} />
                     <Route exact path="/Register" element={<Register />} />
                     <Route exact path="/Chat" element={<Chat />} />
+                    <Route exact path="/Shop" element={<Shop />} />
+
                     <Route exact path="/authForm" element={<AuthForm />} />
                 </Routes>
                 <Footer />

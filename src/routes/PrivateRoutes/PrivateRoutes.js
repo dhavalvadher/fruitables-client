@@ -30,7 +30,7 @@ function PrivateRoutes(props) {
     }
 
     return (
-        isAuthentication ? <Outlet /> : <Navigate to={"/authForm"} replace />
+        isAuthentication ? <Outlet /> : <Navigate to={"/admin"} replace />
     );
 }
 
